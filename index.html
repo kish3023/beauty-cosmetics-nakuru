@@ -1,53 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terrific Scents</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terrific Scents</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <img src="logo.png.png" alt="Terrific Scents Logo" class="logo">
-        <h1>Terrific Scents</h1>
-    </header>
+  <header>
+    <img src="logo.png" alt="Terrific Scents Logo" class="logo" />
+    <h1>Terrific Scents</h1>
+  </header>
 
-    <main>
-        <section class="product-section">
-            <h2>Product Catalog</h2>
-            <div class="product-container">
-                <div class="product-card">
-                    <img src="product1.jpg.JPG" alt="Blowdry">
-                    <h3>Blowdry</h3>
-                    <p><strong>Price:</strong> Ksh 5,500</p>
-                </div>
-                <div class="product-card">
-                    <img src="product2.jpg.JPG" alt="Hot Hair Comb">
-                    <h3>Hot Hair Comb</h3>
-                    <p><strong>Price:</strong> Ksh 4,000</p>
-                </div>
-                <div class="product-card">
-                    <img src="product5.jpg.JPG" alt="Rasasi Perfumes">
-                    <h3>Rasasi Perfumes</h3>
-                    <p><strong>Price:</strong> Ksh 400</p>
-                </div>
-            </div>
-        </section>
+  <section class="hero">
+    <h2>Discover the Best in Beauty, Cosmetics & Perfumes</h2>
+    <p>Top products, affordable prices, premium service</p>
+  </section>
 
-        <section class="branches-section">
-            <h2>Our Branches</h2>
-            <ul>
-                <li><strong>Terrific Scents Main Shop:</strong> Pandit Nehru Road, +254704968188</li>
-                <li><strong>Terrific Scents Downtown:</strong> Pandit Nehru Road, +254708083100</li>
-                <li><strong>Super Scents Nakuru:</strong> Pandit Nehru Road, +254708644464</li>
-                <li><strong>Terrific Scents Luxe:</strong> Pandit Nehru Road, +254799722208</li>
-                <li><strong>Terrific Scents Molo:</strong> Mwamba House, 0799722204</li>
-            </ul>
-        </section>
-    </main>
+  <section class="product-categories">
+    <h2>Shop by Category</h2>
+    <div class="categories">
+      <button>Perfumes</button>
+      <button>Hair Tools</button>
+      <button>Skin Care</button>
+      <button>Makeup</button>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Terrific Scents. All rights reserved.</p>
-    </footer>
+  <section class="carousel">
+    <h2>Featured Products</h2>
+    <div class="slider">
+      <img src="product1.jpg" alt="Blowdry" />
+      <img src="product2.jpg" alt="Hot Hair Comb" />
+      <img src="product3.jpg" alt="Rasasi Perfumes" />
+    </div>
+  </section>
+
+  <section class="product-catalog">
+    <h2>Product Catalog</h2>
+    <div class="products">
+      <div class="product">
+        <img src="product1.jpg" alt="Blowdry" />
+        <h3>Blowdry</h3>
+        <p><strong>Price:</strong> Ksh 5,500</p>
+      </div>
+      <div class="product">
+        <img src="product2.jpg" alt="Hot Hair Comb" />
+        <h3>Hot Hair Comb</h3>
+        <p><strong>Price:</strong> Ksh 4,000</p>
+      </div>
+      <div class="product">
+        <img src="product3.jpg" alt="Rasasi Perfumes" />
+        <h3>Rasasi Perfumes</h3>
+        <p><strong>Price:</strong> Ksh 400</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-contact">
+    <h2>Find Us</h2>
+    <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    <form class="contact-form">
+      <h3>Subscribe to our Newsletter</h3>
+      <input type="email" placeholder="Your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Customers Say</h2>
+    <blockquote>
+      <p>"Amazing quality and customer service. I love shopping here!"</p>
+      <footer>- Happy Customer</footer>
+    </blockquote>
+    <blockquote>
+      <p>"Affordable and stylish products. Highly recommend!"</p>
+      <footer>- Loyal Buyer</footer>
+    </blockquote>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Terrific Scents. All rights reserved.</p>
+    <a href="https://wa.me/254704968188" class="whatsapp-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i> Chat With Us
+    </a>
+  </footer>
 </body>
 </html>
