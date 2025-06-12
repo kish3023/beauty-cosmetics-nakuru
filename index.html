@@ -2,141 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Terrific Scents</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #fff;
       color: #000;
     }
+
     header {
       background-color: #000;
       color: #fff;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-    }
-    .logo-container {
-      display: flex;
-      align-items: center;
-    }
-    .logo {
-      width: 60px;
-      height: auto;
-      margin-right: 10px;
-    }
-    h1 {
-      color: #f06292;
-    }
-    .catalog, .branches, .testimonials, .newsletter, .map {
-      padding: 20px;
-    }
-    .product {
-      display: inline-block;
-      width: 30%;
-      margin: 10px;
-      vertical-align: top;
+      padding: 1rem;
       text-align: center;
     }
+
+    header img.logo {
+      height: 60px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      color: #e91e63;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .product {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+    }
+
     .product img {
       width: 100%;
       height: auto;
-      border-radius: 10px;
+      border-radius: 8px;
     }
+
+    .branches {
+      background-color: #fce4ec;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .branches h3 {
+      color: #e91e63;
+    }
+
     footer {
       background-color: #000;
       color: #fff;
       text-align: center;
-      padding: 10px;
+      padding: 1rem;
     }
-    .whatsapp {
+
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      text-align: center;
-      line-height: 50px;
-      font-size: 24px;
+      background-color: #25D366;
       color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .filter-section {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    select {
+      padding: 0.5rem;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="logo-container">
-      <img src="images/logo.png" alt="Terrific Scents Logo" class="logo" />
-      <h1>Terrific Scents</h1>
-    </div>
+    <img src="logo.png.png" alt="Terrific Scents Logo" class="logo" />
+    <h1>Terrific Scents</h1>
   </header>
 
-  <section class="catalog" data-aos="fade-up">
-    <h2>Product Catalog</h2>
-    <div class="product">
-      <img src="images/product1.jpg" alt="Blowdry">
+  <h2>Product Catalog</h2>
+
+  <div class="filter-section">
+    <label for="filter">Filter by Category:</label>
+    <select id="filter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="tools">Hair Tools</option>
+      <option value="perfumes">Perfumes</option>
+    </select>
+  </div>
+
+  <div class="products" id="productList">
+    <div class="product tools">
+      <img src="product1.jpg.JPG" alt="Blowdry">
       <h3>Blowdry</h3>
-      <p>Price: Ksh 5,500</p>
+      <p><strong>Price:</strong> Ksh 5,500</p>
     </div>
-    <div class="product">
-      <img src="images/product2.jpg" alt="Hot Hair Comb">
+    <div class="product tools">
+      <img src="product2.jpg.JPG" alt="Hot Hair Comb">
       <h3>Hot Hair Comb</h3>
-      <p>Price: Ksh 4,000</p>
+      <p><strong>Price:</strong> Ksh 4,000</p>
     </div>
-    <div class="product">
-      <img src="images/product3.jpg" alt="Rasasi Perfumes">
+    <div class="product perfumes">
+      <img src="product5.jpg.JPG" alt="Rasasi Perfumes">
       <h3>Rasasi Perfumes</h3>
-      <p>Price: Ksh 400</p>
+      <p><strong>Price:</strong> Ksh 400</p>
     </div>
-  </section>
+  </div>
 
-  <section class="branches" data-aos="fade-up">
-    <h2>Our Branches</h2>
-    <ul>
-      <li><strong>Main Shop:</strong> Pandit Nehru Road, +254704968188</li>
-      <li><strong>Downtown:</strong> Pandit Nehru Road, +254708083100</li>
-      <li><strong>Super Scents:</strong> Pandit Nehru Road, +254708644464</li>
-      <li><strong>Luxe:</strong> Pandit Nehru Road, +254799722208</li>
-      <li><strong>Molo:</strong> Mwamba House, 0799722204</li>
-    </ul>
-  </section>
-
-  <section class="testimonials" data-aos="fade-up">
-    <h2>What Our Customers Say</h2>
-    <blockquote>"Absolutely amazing scents! I'm a regular now." – Jane</blockquote>
-    <blockquote>"The blowdry tool saved me so much time and effort." – Mercy</blockquote>
-  </section>
-
-  <section class="newsletter" data-aos="fade-up">
-    <h2>Subscribe to Our Newsletter</h2>
-    <form>
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
-
-  <section class="map" data-aos="fade-up">
-    <h2>Find Us on Google Maps</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127642.57928572194!2d36.00216752293408!3d-0.30309899999998935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa10f14c22a3f%3A0x30d3a3f5e0d378a1!2sNakuru!5e0!3m2!1sen!2ske!4v1686154192489!5m2!1sen!2ske"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
-  </section>
-
-  <a href="https://wa.me/254704968188" class="whatsapp" target="_blank">💬</a>
+  <div class="branches">
+    <h3>Our Branches</h3>
+    <p><strong>Main Shop:</strong> Pandit Nehru Road, +254704968188</p>
+    <p><strong>Downtown:</strong> Pandit Nehru Road, +254708083100</p>
+    <p><strong>Super Scents:</strong> Pandit Nehru Road, +254708644464</p>
+    <p><strong>Luxe:</strong> Pandit Nehru Road, +254799722208</p>
+    <p><strong>Molo:</strong> Mwamba House, 0799722204</p>
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.731923329746!2d36.06802417496559!3d-0.28317993536193613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aaa6d48b97c3d%3A0xcfc31a3c26d9470!2sPandit%20Nehru%20Road%2C%20Nakuru!5e0!3m2!1sen!2ske!4v1718120000000!5m2!1sen!2ske" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Terrific Scents. All rights reserved.</p>
+    <p>© 2025 Terrific Scents. All rights reserved.</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <a class="whatsapp-float" href="https://wa.me/254704968188" target="_blank">💬</a>
+
   <script>
-    AOS.init();
+    function filterProducts() {
+      const filter = document.getElementById("filter").value;
+      const products = document.querySelectorAll(".product");
+      products.forEach(p => {
+        if (filter === "all" || p.classList.contains(filter)) {
+          p.style.display = "block";
+        } else {
+          p.style.display = "none";
+        }
+      });
+    }
   </script>
+
 </body>
 </html>
