@@ -1,175 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terrific Scents</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header img {
-      height: 80px;
-    }
-    h1, h2, h3 {
-      color: #e91e63;
-    }
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-    .product {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 10px;
-      width: 250px;
-      background-color: #fce4ec;
-      text-align: center;
-    }
-    .product img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-    .filter-buttons {
-      text-align: center;
-      margin: 20px;
-    }
-    .filter-buttons button {
-      margin: 5px;
-      padding: 8px 16px;
-      border: none;
-      background: #e91e63;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .testimonial {
-      background-color: #fff;
-      padding: 15px;
-      margin: 10px auto;
-      width: 80%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ddd;
-      text-align: center;
-    }
-    .testimonial p {
-      font-style: italic;
-    }
-    .map-container iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 10px;
-    }
-    .newsletter {
-      text-align: center;
-      padding: 20px;
-      background: #fce4ec;
-      border-radius: 8px;
-      margin-top: 30px;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #000;
-      color: #fff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrific Scents</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <img src="logo.png.png" alt="Terrific Scents Logo" />
-    <h1>Terrific Scents</h1>
-  </header>
+    <header class="header">
+        <img src="logo.png.png" alt="Terrific Scents Logo" class="logo">
+        <h1 class="title">Terrific Scents</h1>
+    </header>
 
-  <main>
-    <h2 style="text-align:center">Product Catalog</h2>
-    <div class="filter-buttons">
-      <button onclick="filterProducts('all')">All</button>
-      <button onclick="filterProducts('hair')">Hair Tools</button>
-      <button onclick="filterProducts('perfume')">Perfumes</button>
-    </div>
+    <section class="catalog" id="catalog">
+        <h2 class="section-title" data-aos="fade-up">Product Catalog</h2>
+        <div class="filter-buttons" data-aos="fade-up">
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('tools')">Hair Tools</button>
+            <button onclick="filterProducts('perfumes')">Perfumes</button>
+        </div>
+        <div class="product-grid">
+            <div class="product-card tools" data-aos="fade-up">
+                <img src="product1.jpg.JPG" alt="Blowdry">
+                <h3>Blowdry</h3>
+                <p>Price: Ksh 5,500</p>
+            </div>
+            <div class="product-card tools" data-aos="fade-up">
+                <img src="product2.jpg.JPG" alt="Hot Hair Comb">
+                <h3>Hot Hair Comb</h3>
+                <p>Price: Ksh 4,000</p>
+            </div>
+            <div class="product-card perfumes" data-aos="fade-up">
+                <img src="product3.jpg.JPG" alt="Rasasi Perfumes">
+                <h3>Rasasi Perfumes</h3>
+                <p>Price: Ksh 400</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="product-grid">
-      <div class="product hair">
-        <img src="product1.jpg.JPG" alt="Blowdry" />
-        <h3>Blowdry</h3>
-        <p><strong>Price:</strong> Ksh 5,500</p>
-      </div>
-      <div class="product hair">
-        <img src="product2.jpg.JPG" alt="Hot Hair Comb" />
-        <h3>Hot Hair Comb</h3>
-        <p><strong>Price:</strong> Ksh 4,000</p>
-      </div>
-      <div class="product perfume">
-        <img src="product3.jpg.JPG" alt="Rasasi Perfumes" />
-        <h3>Rasasi Perfumes</h3>
-        <p><strong>Price:</strong> Ksh 400</p>
-      </div>
-    </div>
+    <section class="carousel" data-aos="zoom-in">
+        <div class="carousel-container">
+            <img src="product1.jpg.JPG" class="carousel-img" alt="Feature 1">
+            <img src="product2.jpg.JPG" class="carousel-img" alt="Feature 2">
+            <img src="product3.jpg.JPG" class="carousel-img" alt="Feature 3">
+        </div>
+    </section>
 
-    <h2 style="text-align:center">Customer Testimonials</h2>
-    <div class="testimonial">
-      <p>"The best perfumes I've ever tried! Great variety and affordable."</p>
-      <h4>&mdash; Grace M., Nakuru</h4>
-    </div>
-    <div class="testimonial">
-      <p>"The hot comb works perfectly on my hair. Will definitely shop again!"</p>
-      <h4>&mdash; Diana W., Molo</h4>
-    </div>
+    <section class="testimonials" data-aos="fade-up">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <blockquote>“Fantastic perfumes and hair tools! Highly recommend.” – Jane W.</blockquote>
+        <blockquote>“Best customer service in Nakuru!” – Mike K.</blockquote>
+    </section>
 
-    <h2 style="text-align:center">Our Branches</h2>
-    <div class="testimonial">
-      <p><strong>Main Shop:</strong> Pandit Nehru Road, +254704968188</p>
-      <p><strong>Downtown:</strong> Pandit Nehru Road, +254708083100</p>
-      <p><strong>Super Scents:</strong> Pandit Nehru Road, +254708644464</p>
-      <p><strong>Luxe:</strong> Pandit Nehru Road, +254799722208</p>
-      <p><strong>Molo:</strong> Mwamba House, 0799722204</p>
-    </div>
+    <section class="branches" id="branches" data-aos="fade-up">
+        <h2 class="section-title">Our Branches</h2>
+        <p><strong>Terrific Scents Main Shop:</strong> Pandit Nehru Road, +254704968188</p>
+        <p><strong>Terrific Scents Downtown:</strong> Pandit Nehru Road, +254708083100</p>
+        <p><strong>Super Scents Nakuru:</strong> Pandit Nehru Road, +254708644464</p>
+        <p><strong>Terrific Scents Luxe:</strong> Pandit Nehru Road, +254799722208</p>
+        <p><strong>Terrific Scents Molo:</strong> Mwamba House, 0799722204</p>
+        <div id="map" style="width: 100%; height: 300px; margin-top: 10px;"></div>
+    </section>
 
-    <h2 style="text-align:center">Find Us</h2>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.7222468327356!2d36.06308180000001!3d-0.28649890000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182a536dd0a8f48f%3A0x898a1a6f22eb0c3f!2sPandit%20Nehru%20Rd!5e0!3m2!1sen!2ske!4v1717600000000" allowfullscreen></iframe>
-    </div>
+    <section class="newsletter" data-aos="fade-up">
+        <h2>Stay Updated</h2>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
 
-    <div class="newsletter">
-      <h3>Subscribe for Offers</h3>
-      <form>
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </main>
+    <a href="https://wa.me/254704968188" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <footer>
-    <p>&copy; 2025 Terrific Scents. All rights reserved.</p>
-  </footer>
+    <footer class="footer">
+        <p>&copy; 2025 Terrific Scents. All rights reserved.</p>
+    </footer>
 
-  <script>
-    function filterProducts(category) {
-      const products = document.querySelectorAll(".product");
-      products.forEach(p => {
-        if (category === "all" || p.classList.contains(category)) {
-          p.style.display = "block";
-        } else {
-          p.style.display = "none";
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         }
-      });
-    }
-  </script>
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -0.3031, lng: 36.0800 },
+                zoom: 13
+            });
+
+            const branches = [
+                { lat: -0.3031, lng: 36.0800, name: 'Main Shop' },
+                { lat: -0.3055, lng: 36.0822, name: 'Downtown' },
+                { lat: -0.3008, lng: 36.0790, name: 'Super Scents' }
+            ];
+
+            branches.forEach(branch => {
+                new google.maps.Marker({
+                    position: { lat: branch.lat, lng: branch.lng },
+                    map: map,
+                    title: branch.name
+                });
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </body>
+
 </html>
