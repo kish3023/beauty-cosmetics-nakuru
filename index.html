@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terrific Scents</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
       background-color: #fff;
       color: #000;
-      margin: 0;
-      padding: 0;
     }
     header {
       background-color: #000;
@@ -21,81 +19,51 @@
       padding: 20px;
       display: flex;
       align-items: center;
-      justify-content: center;
     }
     .logo-container {
       display: flex;
       align-items: center;
     }
     .logo {
-      height: 60px;
-      margin-right: 15px;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    .section-title {
-      text-align: center;
-      color: #e91e63;
-    }
-    .catalog, .branches, .testimonials, .newsletter, .map-section {
-      padding: 20px;
-    }
-    .filter-buttons button {
-      background-color: #e91e63;
-      color: #fff;
-      border: none;
-      margin: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    .product-card {
-      border: 1px solid #e91e63;
-      padding: 10px;
-      margin: 10px;
-      display: inline-block;
-      width: 200px;
-      text-align: center;
-    }
-    .product-card img {
-      width: 100%;
+      width: 60px;
       height: auto;
-    }
-    .testimonial {
-      margin: 10px 0;
-      font-style: italic;
-    }
-    .newsletter input {
-      padding: 10px;
-      width: 70%;
       margin-right: 10px;
     }
-    .newsletter button {
-      background-color: #e91e63;
-      color: white;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
+    h1 {
+      color: #f06292;
     }
-    #map {
+    .catalog, .branches, .testimonials, .newsletter, .map {
+      padding: 20px;
+    }
+    .product {
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+      vertical-align: top;
+      text-align: center;
+    }
+    .product img {
       width: 100%;
-      height: 300px;
-      margin-top: 20px;
+      height: auto;
+      border-radius: 10px;
     }
-    .whatsapp-chat {
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    .whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25D366;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 50px;
-      text-decoration: none;
-    }
-    footer {
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
       text-align: center;
-      padding: 10px;
-      background-color: #000;
+      line-height: 50px;
+      font-size: 24px;
       color: white;
     }
   </style>
@@ -109,23 +77,18 @@
   </header>
 
   <section class="catalog" data-aos="fade-up">
-    <h2 class="section-title">Product Catalog</h2>
-    <div class="filter-buttons">
-      <button onclick="filterProducts('all')">All</button>
-      <button onclick="filterProducts('hair')">Hair Tools</button>
-      <button onclick="filterProducts('perfume')">Perfumes</button>
-    </div>
-    <div class="product-card hair">
+    <h2>Product Catalog</h2>
+    <div class="product">
       <img src="images/product1.jpg" alt="Blowdry">
       <h3>Blowdry</h3>
       <p>Price: Ksh 5,500</p>
     </div>
-    <div class="product-card hair">
+    <div class="product">
       <img src="images/product2.jpg" alt="Hot Hair Comb">
       <h3>Hot Hair Comb</h3>
       <p>Price: Ksh 4,000</p>
     </div>
-    <div class="product-card perfume">
+    <div class="product">
       <img src="images/product3.jpg" alt="Rasasi Perfumes">
       <h3>Rasasi Perfumes</h3>
       <p>Price: Ksh 400</p>
@@ -133,36 +96,39 @@
   </section>
 
   <section class="branches" data-aos="fade-up">
-    <h2 class="section-title">Our Branches</h2>
+    <h2>Our Branches</h2>
     <ul>
       <li><strong>Main Shop:</strong> Pandit Nehru Road, +254704968188</li>
       <li><strong>Downtown:</strong> Pandit Nehru Road, +254708083100</li>
-      <li><strong>Super Scents Nakuru:</strong> Pandit Nehru Road, +254708644464</li>
+      <li><strong>Super Scents:</strong> Pandit Nehru Road, +254708644464</li>
       <li><strong>Luxe:</strong> Pandit Nehru Road, +254799722208</li>
       <li><strong>Molo:</strong> Mwamba House, 0799722204</li>
     </ul>
   </section>
 
   <section class="testimonials" data-aos="fade-up">
-    <h2 class="section-title">What Our Clients Say</h2>
-    <div class="testimonial">“Amazing collection and quality!” - Sarah</div>
-    <div class="testimonial">“Best customer service in Nakuru.” - James</div>
+    <h2>What Our Customers Say</h2>
+    <blockquote>"Absolutely amazing scents! I'm a regular now." – Jane</blockquote>
+    <blockquote>"The blowdry tool saved me so much time and effort." – Mercy</blockquote>
   </section>
 
   <section class="newsletter" data-aos="fade-up">
-    <h2 class="section-title">Subscribe for Updates</h2>
-    <input type="email" placeholder="Enter your email">
-    <button>Subscribe</button>
+    <h2>Subscribe to Our Newsletter</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
   </section>
 
-  <section class="map-section" data-aos="fade-up">
-    <h2 class="section-title">Visit Us</h2>
-    <div id="map"></div>
+  <section class="map" data-aos="fade-up">
+    <h2>Find Us on Google Maps</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127642.57928572194!2d36.00216752293408!3d-0.30309899999998935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa10f14c22a3f%3A0x30d3a3f5e0d378a1!2sNakuru!5e0!3m2!1sen!2ske!4v1686154192489!5m2!1sen!2ske"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
   </section>
 
-  <a href="https://wa.me/254704968188" class="whatsapp-chat" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <a href="https://wa.me/254704968188" class="whatsapp" target="_blank">💬</a>
 
   <footer>
     <p>&copy; 2025 Terrific Scents. All rights reserved.</p>
@@ -171,24 +137,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-    function filterProducts(category) {
-      const products = document.querySelectorAll('.product-card');
-      products.forEach(p => {
-        p.style.display = (category === 'all' || p.classList.contains(category)) ? 'inline-block' : 'none';
-      });
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-  <script>
-    function initMap() {
-      const nakuru = { lat: -0.3031, lng: 36.0800 };
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
-        center: nakuru,
-      });
-      new google.maps.Marker({ position: nakuru, map: map });
-    }
-    window.initMap = initMap;
   </script>
 </body>
 </html>
