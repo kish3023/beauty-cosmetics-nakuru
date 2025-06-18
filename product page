@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terrific Scents - Products</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .logo {
+      height: 60px;
+    }
+    nav {
+      text-align: center;
+      padding: 10px;
+      background-color: #f8f8f8;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #e91e63;
+      font-weight: bold;
+    }
+    h2 {
+      text-align: center;
+      color: #e91e63;
+      margin-top: 30px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+    .product-card p {
+      margin: 0;
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f5f5f5;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png.png" alt="Terrific Scents Logo" class="logo" />
+    <h1>Terrific Scents</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+  </nav>
+
+  <h2>Product Catalog</h2>
+
+  <div class="product-grid">
+    <!-- Sample product list extracted from Excel -->
+    <div class="product-card">
+      <img src="coming-soon.jpg" alt="Blowdry" />
+      <h3>Blowdry</h3>
+      <p>Category: Hair Tools</p>
+      <p>Price: Ksh 5,500</p>
+    </div>
+    <div class="product-card">
+      <img src="coming-soon.jpg" alt="Hot Hair Comb" />
+      <h3>Hot Hair Comb</h3>
+      <p>Category: Hair Tools</p>
+      <p>Price: Ksh 4,000</p>
+    </div>
+    <div class="product-card">
+      <img src="coming-soon.jpg" alt="Rasasi Perfumes" />
+      <h3>Rasasi Perfumes</h3>
+      <p>Category: Perfumes</p>
+      <p>Price: Ksh 400</p>
+    </div>
+    <div class="product-card">
+      <img src="coming-soon.jpg" alt="Victoria's Secret" />
+      <h3>Victoria's Secret</h3>
+      <p>Category: Perfumes</p>
+      <p>Price: Coming Soon</p>
+    </div>
+    <div class="product-card">
+      <img src="coming-soon.jpg" alt="Foundation Kit" />
+      <h3>Foundation Kit</h3>
+      <p>Category: Makeup</p>
+      <p>Price: Coming Soon</p>
+    </div>
+    <!-- Add more products from Excel here if needed -->
+  </div>
+
+  <footer>
+    <p>© 2025 Terrific Scents. All rights reserved.</p>
+  </footer>
+</body>
+</html>
