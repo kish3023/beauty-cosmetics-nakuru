@@ -22,6 +22,18 @@
     .logo {
       height: 60px;
     }
+    .banner {
+      background: url('images/banner.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
     nav {
       text-align: center;
       padding: 10px;
@@ -38,6 +50,17 @@
       color: #e91e63;
       margin-top: 30px;
     }
+    .search-bar {
+      text-align: center;
+      margin: 20px auto;
+    }
+    .search-bar input {
+      padding: 10px;
+      width: 300px;
+      max-width: 90%;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -53,6 +76,10 @@
       padding: 15px;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
     }
     .product-card img {
       max-width: 100%;
@@ -68,6 +95,23 @@
       margin: 0;
       color: #666;
     }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    .whatsapp-float img {
+      height: 50px;
+    }
+    .social-icons {
+      text-align: center;
+      padding: 10px 0;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -75,6 +119,16 @@
       margin-top: 40px;
     }
   </style>
+  <script>
+    function searchProducts() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        card.style.display = name.includes(query) ? "block" : "none";
+      });
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -85,47 +139,53 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
+    <a href="#skincare">Skincare</a>
+    <a href="#makeup">Makeup</a>
+    <a href="#haircare">Haircare</a>
   </nav>
+
+  <div class="banner">
+    Explore Our Top Product Picks
+  </div>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
+  </div>
 
   <h2>Product Catalog</h2>
 
   <div class="product-grid">
-    <!-- Sample product list extracted from Excel -->
-    <div class="product-card">
-      <img src="coming-soon.jpg" alt="Blowdry" />
-      <h3>Blowdry</h3>
-      <p>Category: Hair Tools</p>
-      <p>Price: Ksh 5,500</p>
-    </div>
-    <div class="product-card">
-      <img src="coming-soon.jpg" alt="Hot Hair Comb" />
-      <h3>Hot Hair Comb</h3>
-      <p>Category: Hair Tools</p>
-      <p>Price: Ksh 4,000</p>
-    </div>
-    <div class="product-card">
-      <img src="coming-soon.jpg" alt="Rasasi Perfumes" />
-      <h3>Rasasi Perfumes</h3>
-      <p>Category: Perfumes</p>
-      <p>Price: Ksh 400</p>
-    </div>
-    <div class="product-card">
-      <img src="coming-soon.jpg" alt="Victoria's Secret" />
-      <h3>Victoria's Secret</h3>
-      <p>Category: Perfumes</p>
+    <div class="product-card" id="skincare">
+      <img src="coming-soon.jpg" alt="Face Cream">
+      <h3>Face Cream</h3>
+      <p>Category: Skincare</p>
       <p>Price: Coming Soon</p>
     </div>
-    <div class="product-card">
-      <img src="coming-soon.jpg" alt="Foundation Kit" />
-      <h3>Foundation Kit</h3>
+    <div class="product-card" id="makeup">
+      <img src="coming-soon.jpg" alt="Lipstick">
+      <h3>Lipstick</h3>
       <p>Category: Makeup</p>
       <p>Price: Coming Soon</p>
     </div>
-    <!-- Add more products from Excel here if needed -->
+    <div class="product-card" id="haircare">
+      <img src="coming-soon.jpg" alt="Hair Serum">
+      <h3>Hair Serum</h3>
+      <p>Category: Haircare</p>
+      <p>Price: Coming Soon</p>
+    </div>
   </div>
 
+  <div class="social-icons">
+    <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram" height="30"></a>
+    <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook" height="30"></a>
+  </div>
+
+  <a class="whatsapp-float" href="https://wa.me/254704968188?text=Hi%20I'm%20interested%20in%20a%20product%20from%20Terrific%20Scents" target="_blank">
+    <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp">
+  </a>
+
   <footer>
-    <p>© 2025 Terrific Scents. All rights reserved.</p>
+    <p>&copy; 2025 Terrific Scents. All rights reserved.</p>
   </footer>
 </body>
 </html>
