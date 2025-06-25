@@ -50,7 +50,7 @@
       color: #e91e63;
       margin-top: 30px;
     }
-    .search-bar {
+    .search-bar, .category-filter {
       text-align: center;
       margin: 20px auto;
     }
@@ -60,6 +60,18 @@
       max-width: 90%;
       border-radius: 20px;
       border: 1px solid #ccc;
+    }
+    .category-filter button {
+      margin: 5px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      background-color: #e91e63;
+      color: white;
+      cursor: pointer;
+    }
+    .category-filter button.active {
+      background-color: #000;
     }
     .product-grid {
       display: grid;
@@ -154,6 +166,17 @@
         card.style.display = name.includes(query) ? "block" : "none";
       });
     }
+    function filterCategory(category) {
+      const buttons = document.querySelectorAll('.category-filter button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`[data-category="${category}"]`).classList.add('active');
+
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-cat');
+        card.style.display = category === 'all' || cardCategory === category ? 'block' : 'none';
+      });
+    }
   </script>
 </head>
 <body>
@@ -175,41 +198,48 @@
     <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
   </div>
 
+  <div class="category-filter">
+    <button data-category="all" class="active" onclick="filterCategory('all')">All</button>
+    <button data-category="perfumes" onclick="filterCategory('perfumes')">Perfumes</button>
+    <button data-category="makeup" onclick="filterCategory('makeup')">Makeup</button>
+    <button data-category="skincare" onclick="filterCategory('skincare')">Skincare</button>
+  </div>
+
   <h2>Product Catalog</h2>
 
   <div class="product-grid">
-    <div class="product-card">
+    <div class="product-card" data-cat="hair">
       <img src="product1.jpg.JPG" alt="Blowdry">
       <h3>Blowdry</h3>
       <p><strong>Price:</strong> Ksh 5,500</p>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-cat="hair">
       <img src="product2.jpg.JPG" alt="Hot Hair Comb">
       <h3>Hot Hair Comb</h3>
       <p><strong>Price:</strong> Ksh 4,000</p>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-cat="perfumes">
       <img src="product5.jpg.JPG" alt="Rasasi Perfumes">
       <h3>Rasasi Perfumes</h3>
       <p><strong>Price:</strong> Ksh 400</p>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-cat="makeup">
       <img src="product3.jpg.JPG" alt="Lip Balm">
       <h3>Lip Balm</h3>
-      <p>Category: Makeup</p>
-      <p>Price: Ksh 50</p>
+      <p><strong>Category:</strong> Makeup</p>
+      <p><strong>Price:</strong> Ksh 50</p>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-cat="makeup">
       <img src="product4.jpg.JPG" alt="Concelear Pro Girl">
       <h3>Concelear Pro Girl</h3>
-      <p>Category: Makeup</p>
-      <p>Price: Ksh 200</p>
+      <p><strong>Category:</strong> Makeup</p>
+      <p><strong>Price:</strong> Ksh 200</p>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-cat="skincare">
       <img src="product7.jpg.JPG" alt="Egg Soap">
       <h3>Egg Soap</h3>
-      <p>Category: Skincare</p>
-      <p>Price: Ksh 250</p>
+      <p><strong>Category:</strong> Skincare</p>
+      <p><strong>Price:</strong> Ksh 250</p>
     </div>
   </div>
 
@@ -222,10 +252,10 @@
 
   <section class="contact">
     <h3>Contact Us</h3>
-    <form>
-      <input type="text" placeholder="Your Name" required><br>
-      <input type="email" placeholder="Your Email" required><br>
-      <textarea placeholder="Your Message" rows="4" required></textarea><br>
+    <form action="https://formspree.io/f/mwkgebrq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea><br>
       <button type="submit">Send Message</button>
     </form>
   </section>
