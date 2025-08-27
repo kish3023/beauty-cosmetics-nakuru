@@ -230,7 +230,7 @@ section {
 }
 .contact-section button {
   background: #ff007f;
-  color: white;
+  color: black;
   padding: 14px;
   font-size: 1rem;
   border: none;
@@ -242,39 +242,45 @@ section {
   background: #e60073;
 }
 
-/* Newsletter Section */
 .newsletter-section {
-  background: #ff007f;
-  color: white;
+  background-color: #fff; /* White background for readability */
+  color: #000; /* Black text */
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 40px auto;
 }
+
 .newsletter-section h2 {
+  font-size: 1.8rem;
+  color: #ff007f; /* Pink heading */
+  margin-bottom: 20px;
+}
+
+.newsletter-section input[type="email"] {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
   margin-bottom: 15px;
 }
-.newsletter-section form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.newsletter-section input {
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  width: 250px;
-}
+
 .newsletter-section button {
-  background: black;
-  color: white;
-  padding: 12px 20px;
+  background-color: #ff007f; /* Pink button */
+  color: #fff;
   border: none;
-  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
+
 .newsletter-section button:hover {
-  background: white;
-  color: black;
+  background-color: #e60073; /* Darker pink on hover */
 }
 
 /* Footer */
