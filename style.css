@@ -1,13 +1,18 @@
-/* style.css */
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
   color: #333;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
+/* ===== Header ===== */
 header {
   background-color: #000;
   color: #fff;
@@ -26,16 +31,17 @@ header {
   margin-bottom: 10px;
 }
 
+/* ===== Catalog Section ===== */
 .catalog {
-  padding: 40px 20px;
-  background-color: #fff;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .catalog h2 {
-  color: #e91e63;
-  font-size: 28px;
-  margin-bottom: 20px;
+  color: #e91e63; /* Pink */
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .product {
@@ -43,66 +49,75 @@ header {
   width: 250px;
   margin: 15px;
   padding: 15px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  background-color: #fafafa;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
 }
 
 .product img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .product h3 {
   color: #000;
-  margin: 10px 0 5px;
+  margin: 12px 0 8px;
+  font-size: 1.2rem;
 }
 
 .product p {
   font-weight: bold;
-  color: #444;
+  color: #e91e63; /* Pink for price */
+  font-size: 1.1rem;
 }
 
+/* ===== Branches Section ===== */
 .branches {
-  padding: 40px 20px;
-  background-color: #fce4ec;
+  padding: 50px 20px;
+  background-color: #fff0f6; /* light pink tint */
   text-align: center;
 }
 
 .branches h2 {
   color: #e91e63;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 25px;
 }
 
 .branches ul {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
 }
 
 .branches li {
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 18px;
   color: #000;
+  font-weight: 500;
 }
 
+/* ===== Footer ===== */
 footer {
   background-color: #000;
   color: #fff;
   text-align: center;
   padding: 15px;
+  font-size: 14px;
 }
+
 /* ===== Promo Hero Banner ===== */
 .promo-hero {
   position: relative;
-  /* use your existing image name below */
-  background-image: url('coming-soon.jpg');
-  /* if you uploaded a new file, e.g.: background-image: url('products-banner.jpg'); */
+  background-image: url('products-banner.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
-  min-height: 320px;
+  min-height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,54 +129,48 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .promo-hero__content {
   position: relative;
-  padding: 24px;
+  padding: 30px;
 }
 
 .promo-hero h1 {
-  margin: 0 0 8px;
-  font-size: clamp(24px, 4.5vw, 40px);
-  letter-spacing: .5px;
+  margin: 0 0 12px;
+  font-size: clamp(26px, 4.5vw, 44px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .promo-hero p {
-  margin: 0 0 16px;
-  font-size: clamp(14px, 2.2vw, 18px);
-  opacity: .95;
+  margin: 0 0 20px;
+  font-size: clamp(16px, 2vw, 20px);
+  opacity: 0.95;
 }
 
-/* Buttons (reuse your palette) */
+/* Buttons */
 .btn {
   display: inline-block;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
+  transition: transform 0.2s, background 0.3s;
 }
 
 .btn-primary {
-  background: #e91e63;   /* pink */
+  background: #e91e63;
   color: #fff;
-  box-shadow: 0 6px 16px rgba(233, 30, 99, .35);
-  transition: transform .15s;
+  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.35);
 }
-.btn-primary:hover { transform: translateY(-2px); }
-
-/* ===== Highlights Strip (USPs) ===== */
-.usp-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  max-width: 1000px;
-  margin: 16px auto 24px;
-  padding: 8px 16px;
+.btn-primary:hover {
+  background: #d81b60;
+  transform: translateY(-3px);
 }
 
-/* Layout for the info section */
+/* ===== Info Section ===== */
 .info-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -171,28 +180,26 @@ footer {
   padding: 20px;
 }
 
-/* Each card styling */
 .info-card {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s ease;
+  border-top: 4px solid #e91e63;
 }
 
 .info-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
-/* Headings */
 .info-card h3 {
   font-size: 1.4rem;
   margin-bottom: 15px;
-  color: #333;
+  color: #000;
 }
 
-/* Testimonials */
 .testimonials p {
   font-style: italic;
   margin: 10px 0;
@@ -200,37 +207,40 @@ footer {
   color: #555;
 }
 
-/* Contact form inputs */
+/* Contact form */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
 }
 
-/* Buttons */
 .info-card button {
-  background-color: #ff4081;
+  background-color: #e91e63;
   color: white;
   padding: 12px 18px;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 12px;
   transition: background 0.3s;
 }
 
 .info-card button:hover {
-  background-color: #e7356f;
+  background-color: #d81b60;
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .usp-strip {
     grid-template-columns: 1fr;
   }
 }
