@@ -94,3 +94,84 @@ footer {
   text-align: center;
   padding: 15px;
 }
+/* ===== Promo Hero Banner ===== */
+.promo-hero {
+  position: relative;
+  /* use your existing image name below */
+  background-image: url('coming-soon.jpg');
+  /* if you uploaded a new file, e.g.: background-image: url('products-banner.jpg'); */
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.promo-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
+}
+
+.promo-hero__content {
+  position: relative;
+  padding: 24px;
+}
+
+.promo-hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 4.5vw, 40px);
+  letter-spacing: .5px;
+}
+
+.promo-hero p {
+  margin: 0 0 16px;
+  font-size: clamp(14px, 2.2vw, 18px);
+  opacity: .95;
+}
+
+/* Buttons (reuse your palette) */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #e91e63;   /* pink */
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(233, 30, 99, .35);
+  transition: transform .15s;
+}
+.btn-primary:hover { transform: translateY(-2px); }
+
+/* ===== Highlights Strip (USPs) ===== */
+.usp-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 1000px;
+  margin: 16px auto 24px;
+  padding: 8px 16px;
+}
+
+.usp {
+  background: #fff;
+  border: 1px solid #ffd1e3; /* soft pink edge */
+  border-radius: 14px;
+  padding: 10px 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #e91e63;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+@media (max-width: 640px) {
+  .usp-strip { grid-template-columns: 1fr; }
+}
