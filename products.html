@@ -22,18 +22,6 @@
     .logo {
       height: 60px;
     }
-    .banner {
-      background: url('images/banner.jpg') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      font-size: 2em;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
     nav {
       text-align: center;
       padding: 10px;
@@ -45,53 +33,53 @@
       color: #e91e63;
       font-weight: bold;
     }
-    <!-- PROMO BANNER (Hero) -->
-<section class="promo-hero">
-  <div class="promo-hero__content">
-    <h1>Your New Signature Scent Awaits</h1>
-    <p>Shop perfumes, skincare & haircare — curated for you.</p>
-    <a href="#catalog" class="btn btn-primary">Shop Now</a>
-  </div>
-</section>
 
-<!-- QUICK HIGHLIGHTS STRIP -->
-<section class="usp-strip">
-  <div class="usp">Authentic Brands</div>
-  <div class="usp">Great Prices</div>
-  <div class="usp">Pickup at 5 Outlets</div>
-</section>
+    /* Promo Hero Banner */
+    .promo-hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('banner.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .promo-hero__content h1 {
+      font-size: 2.5em;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+    .promo-hero__content p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .promo-hero__content .btn {
+      background: #e91e63;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .promo-hero__content .btn:hover {
+      background: #000;
+    }
+
+    /* Highlights strip */
+    .usp-strip {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #ffe6f0;
+      padding: 15px;
+      font-weight: bold;
+      color: #000;
+    }
 
     h2 {
       text-align: center;
       color: #e91e63;
       margin-top: 30px;
     }
-    .search-bar, .category-filter {
-      text-align: center;
-      margin: 20px auto;
-    }
-    .search-bar input {
-      padding: 10px;
-      width: 300px;
-      max-width: 90%;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-    }
-    .category-filter button {
-      margin: 5px;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 20px;
-      background-color: #e91e63;
-      color: white;
-      cursor: pointer;
-    }
-    .category-filter button.active {
-      background-color: #000;
-    }
-    <section id="catalog" class="catalog">
-  <!-- your products … -->
-
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -126,159 +114,7 @@
       margin: 0;
       color: #666;
     }
-    .testimonials, .contact, .branches {
-      padding: 40px 20px;
-      background-color: #ffe6f0;
-      text-align: center;
-    }
-    .testimonials h3, .contact h3, .branches h3 {
-      color: #e91e63;
-      margin-bottom: 20px;
-    }
-    .contact form input,
-    .contact form textarea {
-      width: 100%;
-      max-width: 400px;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    .contact button {
-      padding: 10px 20px;
-      background-color: #e91e63;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
-    }
-    .whatsapp-float img {
-      height: 50px;
-    }
-    .social-icons {
-      text-align: center;
-      padding: 10px 0;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f5f5f5;
-      margin-top: 40px;
-    }
   </style>
- /* ===== Promo Hero Banner ===== */
-.promo-hero {
-  position: relative;
-  /* use your existing image name below */
-  background-image: url('coming-soon.jpg');
-  /* if you uploaded a new file, e.g.: background-image: url('products-banner.jpg'); */
-  background-size: cover;
-  background-position: center;
-  min-height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-}
-
-.promo-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
-}
-
-.promo-hero__content {
-  position: relative;
-  padding: 24px;
-}
-
-.promo-hero h1 {
-  margin: 0 0 8px;
-  font-size: clamp(24px, 4.5vw, 40px);
-  letter-spacing: .5px;
-}
-
-.promo-hero p {
-  margin: 0 0 16px;
-  font-size: clamp(14px, 2.2vw, 18px);
-  opacity: .95;
-}
-
-/* Buttons (reuse your palette) */
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.btn-primary {
-  background: #e91e63;   /* pink */
-  color: #fff;
-  box-shadow: 0 6px 16px rgba(233, 30, 99, .35);
-  transition: transform .15s;
-}
-.btn-primary:hover { transform: translateY(-2px); }
-
-/* ===== Highlights Strip (USPs) ===== */
-.usp-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  max-width: 1000px;
-  margin: 16px auto 24px;
-  padding: 8px 16px;
-}
-
-.usp {
-  background: #fff;
-  border: 1px solid #ffd1e3; /* soft pink edge */
-  border-radius: 14px;
-  padding: 10px 12px;
-  text-align: center;
-  font-weight: 600;
-  color: #e91e63;
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);
-}
-
-@media (max-width: 640px) {
-  .usp-strip { grid-template-columns: 1fr; }
-}
-
-  <script>
-    function searchProducts() {
-      const query = document.getElementById("searchInput").value.toLowerCase();
-      const cards = document.querySelectorAll(".product-card");
-      cards.forEach(card => {
-        const name = card.querySelector("h3").textContent.toLowerCase();
-        card.style.display = name.includes(query) ? "block" : "none";
-      });
-    }
-    function filterCategory(category) {
-      const buttons = document.querySelectorAll('.category-filter button');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`[data-category="${category}"]`).classList.add('active');
-
-      const cards = document.querySelectorAll('.product-card');
-      cards.forEach(card => {
-        const cardCategory = card.getAttribute('data-cat');
-        card.style.display = category === 'all' || cardCategory === category ? 'block' : 'none';
-      });
-    }
-  </script>
 </head>
 <body>
   <header>
@@ -291,24 +127,25 @@
     <a href="products.html">Products</a>
   </nav>
 
-  <div class="banner">
-    Explore Our Top Product Picks
-  </div>
+  <!-- ✅ New Promo Banner -->
+  <section class="promo-hero">
+    <div class="promo-hero__content">
+      <h1>✨ Your New Signature Scent Awaits ✨</h1>
+      <p>Explore perfumes, skincare & beauty must-haves – handpicked just for you.</p>
+      <a href="#product-catalog" class="btn">Shop Now</a>
+    </div>
+  </section>
 
-  <div class="search-bar">
-    <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
-  </div>
+  <!-- ✅ Highlights strip -->
+  <section class="usp-strip">
+    <div class="usp">Authentic Brands</div>
+    <div class="usp">Great Prices</div>
+    <div class="usp">5 Convenient Outlets</div>
+  </section>
 
-  <div class="category-filter">
-    <button data-category="all" class="active" onclick="filterCategory('all')">All</button>
-    <button data-category="perfumes" onclick="filterCategory('perfumes')">Perfumes</button>
-    <button data-category="makeup" onclick="filterCategory('makeup')">Makeup</button>
-    <button data-category="skincare" onclick="filterCategory('skincare')">Skincare</button>
-  </div>
-
-  <h2>Product Catalog</h2>
-
+   <h2 id="product-catalog">Product Catalog</h2>
   <div class="product-grid">
+    <!-- Haircare -->
     <div class="product-card" data-cat="hair">
       <img src="product1.jpg.JPG" alt="Blowdry">
       <h3>Blowdry</h3>
@@ -319,111 +156,67 @@
       <h3>Hot Hair Comb</h3>
       <p><strong>Price:</strong> Ksh 4,000</p>
     </div>
+
+    <!-- Perfumes -->
     <div class="product-card" data-cat="perfumes">
       <img src="product5.jpg.JPG" alt="Rasasi Perfumes">
       <h3>Rasasi Perfumes</h3>
       <p><strong>Price:</strong> Ksh 400</p>
     </div>
+    <div class="product-card" data-cat="perfumes">
+      <img src="chastity.jpg.JPG" alt="Chastity Woman Perfume">
+      <h3>Chastity Woman Perfume</h3>
+      <p><strong>Price:</strong> Ksh 2,500</p>
+    </div>
+
+    <!-- Makeup (old + new) -->
     <div class="product-card" data-cat="makeup">
-      <img src="product3.jpg.JPG" alt="Lip Balm">
+      <img src="product3.jpg" alt="Lip Balm">
       <h3>Lip Balm</h3>
-      <p><strong>Category:</strong> Makeup</p>
       <p><strong>Price:</strong> Ksh 50</p>
     </div>
     <div class="product-card" data-cat="makeup">
-      <img src="product4.jpg.JPG" alt="Concelear Pro Girl">
+      <img src="product4.jpg" alt="Concelear Pro Girl">
       <h3>Concelear Pro Girl</h3>
-      <p><strong>Category:</strong> Makeup</p>
       <p><strong>Price:</strong> Ksh 200</p>
     </div>
+    <div class="product-card" data-cat="makeup">
+      <img src="maybellineskintint.jpg.JPG" alt="Maybelline Skin Tint">
+      <h3>Maybelline Skin Tint</h3>
+      <p><strong>Price:</strong> Ksh 2,500</p>
+    </div>
+
+    <!-- Skincare (old + new) -->
     <div class="product-card" data-cat="skincare">
-      <img src="product7.jpg.JPG" alt="Egg Soap">
+      <img src="product7.jpg" alt="Egg Soap">
       <h3>Egg Soap</h3>
-      <p><strong>Category:</strong> Skincare</p>
       <p><strong>Price:</strong> Ksh 250</p>
     </div>
+    <div class="product-card" data-cat="skincare">
+      <img src="dearbodyshowergel.jpg.JPG" alt="Dear Body Shower Gel">
+      <h3>Dear Body Shower Gel</h3>
+      <p><strong>Price:</strong> Ksh 500</p>
+    </div>
+    <div class="product-card" data-cat="skincare">
+      <img src="missbeautybodyscrub.jpg.JPG" alt="Miss Beauty Body Scrub">
+      <h3>Miss Beauty Body Scrub</h3>
+      <p><strong>Price:</strong> Ksh 250</p>
+    </div>
+    <div class="product-card" data-cat="skincare">
+      <img src="coffeeseabathscrub.jpg.JPG" alt="Coffee Sea Salt Bath Scrub">
+      <h3>Coffee Sea Salt Bath Scrub</h3>
+      <p><strong>Price:</strong> Ksh 350</p>
+    </div>
+    <div class="product-card" data-cat="skincare">
+      <img src="rexonarollon400ml.jpg.JPG" alt="Rexona Roll On 400ml">
+      <h3>Rexona Roll On 400ml</h3>
+      <p><strong>Price:</strong> Ksh 400</p>
+    </div>
+
+    <!-- Accessories -->
+    <div class="product-card" data-cat="accessories">
+      <img src="magneticearrings.jpg.JPG" alt="Magnetic Earrings">
+      <h3>Magnetic Earrings</h3>
+      <p><strong>Price:</strong> Ksh 150</p>
+    </div>
   </div>
-<div class="product-card" data-cat="skincare">
-  <img src="dearbodyshowergel.jpg.JPG" alt="Dear Body Shower Gel">
-  <h3>Dear Body Shower Gel</h3>
-  <p><strong>Category:</strong> skincare</p>
-  <p><strong>Price:</strong> Ksh 500</p>
-</div>
-<div class="product-card" data-cat="perfumes">
-  <img src="chastitywomanperfume.jpg.JPG" alt="Chastity Woman Perfume">
-  <h3>Chastity Woman Perfume</h3>
-  <p><strong>Category:</strong> perfume</p>
-  <p><strong>Price:</strong> Ksh 2,500</p>
-</div>
-<div class="product-card" data-cat="jewelleries">
-  <img src="magneticearrings.jpg.JPG" alt="Magnetic Earrings">
-  <h3>Magnetic Earrings</h3>
-  <p><strong>Category:</strong> jewelleries</p>
-  <p><strong>Price:</strong> Ksh 150</p>
-</div>
-<div class="product-card" data-cat="skincare">
-  <img src="missbeautybodyscrub.jpg.JPG" alt="Miss Beauty Body Scrub">
-  <h3>Miss Beauty Body Scrub</h3>
-  <p><strong>Category:</strong> skincare</p>
-  <p><strong>Price:</strong> Ksh 250</p>
-</div>
-<div class="product-card" data-cat="makeup">
-  <img src="maybellineskintint.jpg.JPG" alt="Maybelline Skin Tint">
-  <h3>Maybelline Skin Tint</h3>
-  <p><strong>Category:</strong> makeup</p>
-  <p><strong>Price:</strong> Ksh 2,500</p>
-</div>
-<div class="product-card" data-cat="skincare">
-  <img src="coffeeseabathscrub.jpg.JPG" alt="Coffee Sea Bath Scrub">
-  <h3>Coffee Sea Bath Scrub</h3>
-  <p><strong>Category:</strong> skincare</p>
-  <p><strong>Price:</strong> Ksh 350</p>
-</div>
-<div class="product-card" data-cat="skincare">
-  <img src="rexonarollon400ml.jpg.JPG" alt="Rexona Roll On 400ml">
-  <h3>Rexona Roll On 400ml</h3>
-  <p><strong>Category:</strong> skincare</p>
-  <p><strong>Price:</strong> Ksh 400</p>
-</div>
-```
-  <section class="testimonials">
-    <h3>What Our Customers Say</h3>
-    <p>"Amazing scents and quality products! Highly recommended." - Jane M.</p>
-    <p>"Great customer service and quick delivery!" - Brian K.</p>
-    <p>"The best perfume collection in Nakuru!" - Carol A.</p>
-  </section>
-
-  <section class="contact">
-    <h3>Contact Us</h3>
-    <form action="https://formspree.io/f/mwkgebrq" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required><br>
-      <input type="email" name="email" placeholder="Your Email" required><br>
-      <textarea name="message" placeholder="Your Message" rows="4" required></textarea><br>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <section class="branches">
-    <h3>Our Branches</h3>
-    <p><strong>Main Shop:</strong> Pandit Nehru Road, +254704968188</p>
-    <p><strong>Downtown:</strong> Mosque Road, +254708083100</p>
-    <p><strong>Super Scents:</strong> Opposite Scooty Mali Mali, +254796840647</p>
-    <p><strong>Luxe:</strong> Former Tuskys Magic Building, +254799722208</p>
-    <p><strong>Molo:</strong> Mwamba House, +254799722204</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4711.87558826626!2d36.07164817566809!3d-0.28498763535286464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18298d005f8a4635%3A0x8c5e9f0aed9d0669!2sTERRIFIC%20SCENTS%20NAKURU%20MAIN%20SHOP!5e1!3m2!1sen!2ske!4v1750258105363!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
-
-  <div class="social-icons">
-    <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram" height="30"></a>
-    <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook" height="30"></a>
-  </div>
-
-  <a class="whatsapp-float" href="https://wa.me/254704968188?text=Hi%20I'm%20interested%20in%20a%20product%20from%20Terrific%20Scents" target="_blank">
-    <img src="whatsapp-logo.jpg" alt="Chat on WhatsApp">
-  </a>
-
-  <footer>
-    <p>&copy; 2025 Terrific Scents. All rights reserved.</p>
-  </footer>
-</body>
-</html>
