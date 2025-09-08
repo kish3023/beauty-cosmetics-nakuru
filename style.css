@@ -43,7 +43,47 @@ header {
   margin-bottom: 30px;
   font-weight: 700;
 }
+/* ✅ Product Card Styling */
+.product-card {
+  width: 220px; /* fixed width */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 15px;
+  margin: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
 
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain; /* keeps image aspect ratio */
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* ✅ Wrap product cards in a flex container */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 .product {
   display: inline-block;
   width: 250px;
