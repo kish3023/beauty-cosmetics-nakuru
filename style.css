@@ -244,3 +244,53 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* Apply a nice container layout */
+.footer-sections {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Space between sections */
+  margin: 50px auto;
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* Style each section */
+.footer-section {
+  background: #fff5f7; /* Light pink background */
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Make inputs look better */
+.footer-section input,
+.footer-section textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Buttons styling */
+.footer-section button,
+.footer-section input[type="submit"] {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-section button:hover,
+.footer-section input[type="submit"]:hover {
+  background: #e73370;
+}
