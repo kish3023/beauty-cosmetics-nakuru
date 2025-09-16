@@ -176,31 +176,160 @@
     <div class="usp">5 Convenient Outlets</div>
   </section>
 
-  <h2 id="product-catalog">Product Catalog</h2>
+ <!-- Product Catalog -->
+<section id="product-catalog" aria-label="Product Catalog">
+  <h2>Product Catalog</h2>
+
   <div class="product-grid">
     <!-- Haircare -->
-    <div class="product-card"><img src="product1.jpg.JPG" alt="Blowdry"><h3>Blowdry</h3><p><strong>Price:</strong> Ksh 5,500</p></div>
-    <div class="product-card"><img src="product2.jpg.JPG" alt="Hot Hair Comb"><h3>Hot Hair Comb</h3><p><strong>Price:</strong> Ksh 4,000</p></div>
+    <div class="product-card" data-cat="hair">
+      <figure>
+        <img src="product1.jpg.JPG" alt="Blowdry"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Blowdry</h3>
+          <p><strong>Price:</strong> Ksh 5,500</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="product-card" data-cat="hair">
+      <figure>
+        <img src="product2.jpg.JPG" alt="Hot Hair Comb"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Hot Hair Comb</h3>
+          <p><strong>Price:</strong> Ksh 4,000</p>
+        </figcaption>
+      </figure>
+    </div>
 
     <!-- Perfumes -->
-    <div class="product-card"><img src="product5.jpg.JPG" alt="Rasasi Perfumes"><h3>Rasasi Perfumes</h3><p><strong>Price:</strong> Ksh 400</p></div>
-    <div class="product-card"><img src="chastitywomanperfume.jpg.JPG" alt="Chastity Woman Perfume"><h3>Chastity Woman Perfume</h3><p><strong>Price:</strong> Ksh 2,500</p></div>
+    <div class="product-card" data-cat="perfumes">
+      <figure>
+        <img src="product5.jpg.JPG" alt="Rasasi Perfumes"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Rasasi Perfumes</h3>
+          <p><strong>Price:</strong> Ksh 400</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="product-card" data-cat="perfumes">
+      <figure>
+        <img src="chastitywomanperfume.jpg.JPG" alt="Chastity Woman Perfume"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Chastity Woman Perfume</h3>
+          <p><strong>Price:</strong> Ksh 2,500</p>
+        </figcaption>
+      </figure>
+    </div>
 
     <!-- Makeup -->
-    <div class="product-card"><img src="product3.jpg.JPG" alt="Lip Balm"><h3>Lip Balm</h3><p><strong>Price:</strong> Ksh 50</p></div>
-    <div class="product-card"><img src="product4.jpg.JPG" alt="Concelear Pro Girl"><h3>Concelear Pro Girl</h3><p><strong>Price:</strong> Ksh 200</p></div>
-    <div class="product-card"><img src="maybellineskintint.jpg.JPG" alt="Maybelline Skin Tint"><h3>Maybelline Skin Tint</h3><p><strong>Price:</strong> Ksh 2,500</p></div>
+    <div class="product-card" data-cat="makeup">
+      <figure>
+        <img src="product3.jpg.JPG" alt="Lip Balm"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Lip Balm</h3>
+          <p><strong>Price:</strong> Ksh 50</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="product-card" data-cat="makeup">
+      <figure>
+        <img src="product4.jpg.JPG" alt="Concelear Pro Girl"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Concelear Pro Girl</h3>
+          <p><strong>Price:</strong> Ksh 200</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="product-card" data-cat="makeup">
+      <figure>
+        <img src="maybellineskintint.jpg.JPG" alt="Maybelline Skin Tint"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Maybelline Skin Tint</h3>
+          <p><strong>Price:</strong> Ksh 2,500</p>
+        </figcaption>
+      </figure>
+    </div>
 
     <!-- Skincare -->
-    <div class="product-card"><img src="product7.jpg.JPG" alt="Egg Soap"><h3>Egg Soap</h3><p><strong>Price:</strong> Ksh 250</p></div>
-    <div class="product-card"><img src="dearbodyshowergel.jpg.JPG" alt="Dear Body Shower Gel"><h3>Dear Body Shower Gel</h3><p><strong>Price:</strong> Ksh 500</p></div>
-    <div class="product-card"><img src="missbeautybodyscrub.jpg.JPG" alt="Miss Beauty Body Scrub"><h3>Miss Beauty Body Scrub</h3><p><strong>Price:</strong> Ksh 250</p></div>
-    <div class="product-card"><img src="coffeeseabathscrub.jpg.JPG" alt="Coffee Sea Salt Bath Scrub"><h3>Coffee Sea Salt Bath Scrub</h3><p><strong>Price:</strong> Ksh 350</p></div>
-    <div class="product-card"><img src="rexonarollon400ml.jpg.JPG" alt="Rexona Roll On 400ml"><h3>Rexona Roll On 400ml</h3><p><strong>Price:</strong> Ksh 400</p></div>
+    <div class="product-card" data-cat="skincare">
+      <figure>
+        <img src="product7.jpg.JPG" alt="Egg Soap"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Egg Soap</h3>
+          <p><strong>Price:</strong> Ksh 250</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="product-card" data-cat="skincare">
+      <figure>
+        <img src="dearbodyshowergel.jpg.JPG" alt="Dear Body Shower Gel"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Dear Body Shower Gel</h3>
+          <p><strong>Price:</strong> Ksh 500</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="product-card" data-cat="skincare">
+      <figure>
+        <img src="missbeautybodyscrub.jpg.JPG" alt="Miss Beauty Body Scrub"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Miss Beauty Body Scrub</h3>
+          <p><strong>Price:</strong> Ksh 250</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="product-card" data-cat="skincare">
+      <figure>
+        <img src="coffeeseabathscrub.jpg.JPG" alt="Coffee Sea Salt Bath Scrub"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Coffee Sea Salt Bath Scrub</h3>
+          <p><strong>Price:</strong> Ksh 350</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="product-card" data-cat="skincare">
+      <figure>
+        <img src="rexonarollon400ml.jpg.JPG" alt="Rexona Roll On 400ml"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Rexona Roll On 400ml</h3>
+          <p><strong>Price:</strong> Ksh 400</p>
+        </figcaption>
+      </figure>
+    </div>
 
     <!-- Accessories -->
-    <div class="product-card"><img src="magneticearrings.jpg.JPG" alt="Magnetic Earrings"><h3>Magnetic Earrings</h3><p><strong>Price:</strong> Ksh 150</p></div>
+    <div class="product-card" data-cat="accessories">
+      <figure>
+        <img src="magneticearrings.jpg.JPG" alt="Magnetic Earrings"
+             onerror="this.onerror=null;this.src='coming-soon.jpg';">
+        <figcaption>
+          <h3>Magnetic Earrings</h3>
+          <p><strong>Price:</strong> Ksh 150</p>
+        </figcaption>
+      </figure>
+    </div>
   </div>
+</section>
 
   <main class="info-sections">
     <!-- ✅ Testimonials -->
